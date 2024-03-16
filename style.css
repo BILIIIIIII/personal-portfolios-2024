@@ -1,0 +1,527 @@
+:root {
+  --purple: rgb(226, 151, 255);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+  text-wrap: balance;
+}
+
+a {
+  text-decoration: none;
+
+  color: #333;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+li {
+  list-style: none;
+}
+
+span .bx {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bx {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.bx-right-arrow-alt {
+  transform: rotate(45deg);
+}
+
+#about-me .socmed .menu-title span .bx-right-arrow-alt {
+  transform: rotate(135deg);
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  scroll-padding: 3rem;
+
+  background-color: whitesmoke;
+  color: #333;
+
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+header {
+  padding: 3rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+header .info,
+header .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header .info .user {
+  font-size: clamp(1.1rem, 4vw + 1rem, 4.1rem);
+  text-transform: capitalize;
+
+  margin-bottom: 1rem;
+}
+header .info .address {
+  text-transform: capitalize;
+}
+
+header .menu {
+  align-items: end;
+
+  text-transform: capitalize;
+}
+
+header .menu nav {
+  background-color: var(--purple);
+  color: #333;
+
+  padding: 0.5rem 1.4rem;
+
+  border-radius: 20px;
+}
+
+.scroll-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 0.5rem;
+}
+
+/*-------------------------------------------------*/
+
+.hero {
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.hero img {
+  position: relative;
+
+  width: 100vw;
+  height: 105vh;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/*-------------------------------------------------*/
+
+main {
+  padding: 4rem;
+}
+
+section {
+  border-bottom: 2px solid #333;
+}
+
+main section .menu-title {
+  color: #666;
+
+  text-transform: capitalize;
+}
+
+#about-me {
+  display: flex;
+
+  padding: 0 0 3rem 0;
+}
+
+#about-me > *:nth-child(1) {
+  flex: 1 1 70%;
+}
+
+#about-me > *:nth-child(2) {
+  flex: 1 1 30%;
+}
+
+#about-me .resume {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: clamp(0.8rem, 4vw + 1rem, 3rem);
+
+  border-right: 2px solid #333;
+}
+
+#about-me .socmed {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 0 2rem;
+}
+
+#about-me .menu-title span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#about-me .socmed .logos {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  gap: 0.5rem;
+}
+
+#about-me .socmed .logos a {
+  background-color: var(--purple);
+
+  width: fit-content;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.5rem;
+  border-radius: 50px;
+
+  transition: 0.3s ease;
+}
+#about-me .socmed .logos a:hover {
+  background-color: var(--purple);
+}
+
+#about-me .socmed .logos a .bx {
+  color: #333;
+
+  font-size: 24px;
+
+  transition: 0.3s ease;
+}
+
+#about-me .socmed .logos a:hover .bx {
+  color: white;
+
+  font-size: 24px;
+}
+
+#what-i-do {
+  padding: 3rem 0;
+
+  display: flex;
+
+  gap: 1rem;
+}
+
+#what-i-do > *:nth-child(1) {
+  flex: 1 1 30%;
+}
+
+#what-i-do > *:nth-child(2) {
+  flex: 1 1 70%;
+}
+
+#what-i-do .menu-title {
+  padding-right: 2rem;
+
+  border-right: 2px solid #333;
+}
+
+#what-i-do .menu-title span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#what-i-do article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding-left: 2rem;
+}
+
+#what-i-do article .row-1 {
+  border-bottom: 2px solid #333;
+}
+
+#what-i-do article .row-1,
+#what-i-do article .row-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#what-i-do article .row-1 {
+  padding-bottom: 2rem;
+}
+
+#what-i-do article .row-2 {
+  padding-top: 2rem;
+}
+
+#what-i-do article .row .c1 {
+  padding-right: 2rem;
+
+  border-right: 2px solid #333;
+}
+#what-i-do article .row .c2 {
+  padding-left: 2rem;
+}
+
+#what-i-do article .row .card h1 {
+  font-size: clamp(0.6rem, 4vw + 1rem, 2rem);
+  text-transform: capitalize;
+
+  margin-bottom: 0.5rem;
+}
+
+#what-i-do article .row .card p {
+  text-align: justify;
+}
+
+/*-------------------------------------------------*/
+marquee {
+  background-image: linear-gradient(90deg, #666, #000, #666);
+}
+
+marquee span {
+  color: white;
+  font-size: 5rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+/*-------------------------------------------------*/
+#project {
+  border-bottom: none;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#project > *:nth-child(1) {
+  flex: 1 1 30%;
+}
+
+#project > *:nth-child(2) {
+  flex: 1 1 70%;
+}
+
+#project .menu-title {
+  padding-right: 2rem;
+}
+
+#project .menu-title span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#project article .card {
+  padding: 1rem 0;
+
+  border-bottom: 2px solid #333;
+
+  transition: 0.4s ease;
+}
+#project article .card:hover {
+  background-color: var(--purple);
+}
+
+#project article .card .title {
+  font-size: clamp(0.8rem, 4vw + 1rem, 3.5rem);
+  text-transform: uppercase;
+
+  margin-bottom: 1rem;
+}
+
+#project article .card a {
+  display: flex;
+  justify-content: space-between;
+}
+
+#project article .card a .detail {
+  display: flex;
+
+  gap: 1rem;
+}
+
+#project article .card a .detail .hero {
+  max-width: 300px;
+
+  overflow: hidden;
+}
+
+#project article .card a .detail .hero img {
+  width: 100%;
+  height: fit-content;
+  object-fit: cover;
+}
+
+/*-------------------------------------------------*/
+
+footer {
+  background-color: #333;
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 3rem;
+}
+
+footer > * {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .copyright {
+  text-transform: capitalize;
+}
+
+footer .creator {
+  display: flex;
+  align-items: center;
+}
+
+footer .creator :is(span .bxs-heart, b) {
+  margin: 0 0.5rem;
+}
+
+footer .creator :is(span, b) {
+  display: flex;
+  align-items: center;
+}
+
+footer .creator span .bxs-heart {
+  font-size: 24px;
+
+  transition: 0.3s ease;
+}
+
+footer .creator:hover span .bxs-heart {
+  color: red;
+}
+
+/*-------------------------------------------------*/
+
+@media (max-width: 53em) {
+  main,
+  header {
+    padding: 2rem;
+  }
+
+  header .menu {
+    display: none;
+  }
+
+  #about-me,
+  #what-i-do {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    gap: 1rem;
+  }
+
+  #about-me .resume,
+  #what-i-do .menu-title {
+    border-right: 0;
+  }
+
+  #about-me .resume {
+    order: 2;
+  }
+
+  #what-i-do article,
+  #about-me .socmed {
+    padding: 0;
+    padding-bottom: 2rem;
+  }
+
+  #about-me .socmed .menu-title {
+    margin-bottom: 1rem;
+  }
+
+  #what-i-do .menu-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 2rem;
+  }
+
+  #what-i-do article {
+    padding: 0;
+
+    gap: 1rem;
+  }
+
+  #what-i-do article .row {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0;
+    gap: 1rem;
+
+    border-bottom: none;
+  }
+
+  #what-i-do article :is(.row-1 .c1, .row-2 .c1) {
+    padding-right: 0;
+
+    border-right: 0;
+  }
+
+  #what-i-do article :is(.row-1 .c2, .row-2 .c2) {
+    padding-left: 0;
+  }
+
+  #project .menu-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 2rem;
+  }
+
+  #project .menu-title span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #project,
+  #project article .card :is(a, a .detail) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
