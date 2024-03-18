@@ -18,6 +18,11 @@ h6 {
   text-wrap: balance;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 a {
   text-decoration: none;
 
@@ -80,7 +85,7 @@ header .menu {
 }
 
 header .info .user {
-  font-size: clamp(1.1rem, 4vw + 1rem, 4.1rem);
+  font-size: clamp(1rem, 4vw + 1rem, 4.1rem);
   text-transform: capitalize;
 
   margin-bottom: 1rem;
@@ -115,9 +120,29 @@ header .menu nav {
 /*-------------------------------------------------*/
 
 .hero {
+  position: relative;
+
   width: 100%;
 
   overflow: hidden;
+}
+.hero::before {
+  content: "";
+
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+
+  background: url() no-repeat;
+  background-size: 80px;
+
+  width: 100%;
+  aspect-ratio: 1;
+
+  margin: 3rem;
+
+  z-index: 2;
 }
 
 .hero img {
@@ -259,15 +284,17 @@ main section .menu-title {
   padding-left: 2rem;
 }
 
+#what-i-do article .row > * {
+  flex: 1;
+}
+
 #what-i-do article .row-1 {
   border-bottom: 2px solid #333;
 }
 
-#what-i-do article .row-1,
-#what-i-do article .row-2 {
+#what-i-do article .row {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 #what-i-do article .row-1 {
@@ -294,13 +321,10 @@ main section .menu-title {
   margin-bottom: 0.5rem;
 }
 
-#what-i-do article .row .card p {
-  text-align: justify;
-}
-
 /*-------------------------------------------------*/
 marquee {
   background-image: linear-gradient(90deg, #666, #000, #666);
+  padding: 2rem 0;
 }
 
 marquee span {
@@ -336,6 +360,8 @@ marquee span {
 }
 
 #project article .card {
+  display: flex;
+
   padding: 1rem 0;
 
   border-bottom: 2px solid #333;
@@ -346,34 +372,41 @@ marquee span {
   background-color: var(--purple);
 }
 
-#project article .card .title {
+#project article .card a {
+  display: flex;
+
+  gap: 1rem;
+}
+
+#project article .card a > :nth-child(2) {
+  width: 10%;
+}
+
+#project article .card a .info {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 1rem;
+}
+
+#project article .card a .info .title {
   font-size: clamp(0.8rem, 4vw + 1rem, 3.5rem);
   text-transform: uppercase;
 
   margin-bottom: 1rem;
 }
 
-#project article .card a {
-  display: flex;
-  justify-content: space-between;
+#project article .card a .info .hero {
+}
+
+#project article .card a .info .hero img {
+  height: 100%;
+  object-fit: cover;
 }
 
 #project article .card a .detail {
   display: flex;
-
-  gap: 1rem;
-}
-
-#project article .card a .detail .hero {
-  max-width: 300px;
-
-  overflow: hidden;
-}
-
-#project article .card a .detail .hero img {
-  width: 100%;
-  height: fit-content;
-  object-fit: cover;
+  justify-content: end;
 }
 
 /*-------------------------------------------------*/
@@ -512,9 +545,12 @@ footer .creator:hover span .bxs-heart {
   }
 
   #project,
-  #project article .card :is(a, a .detail) {
-    display: flex;
+  #project article .card :is(a) {
     flex-direction: column;
+  }
+
+  #project article .card a .detail {
+    justify-content: start;
   }
 
   footer {

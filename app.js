@@ -3,7 +3,7 @@ const projectData = [
     link: "https://traffic-counter-mobile-programming-5.vercel.app/",
     name: "traffic counter",
     img: "trafficcounter.png",
-    date: { day: "07", month: " OCT", year: "2023" },
+    date: { day: "16", month: " DES", year: "2023" },
   },
 ];
 
@@ -57,16 +57,16 @@ projectData.forEach((data) => {
 
       <div class="info">
         <div class="title"><p>${data.name}</p></div>
+
+         <div class="hero">
+          <img src="${data.img}" alt="" />
+        </div>
       </div>
 
       <div class="detail">
 
-        <div class="hero">
-          <img src="${data.img}" alt="" />
-        </div>
-
         <div class="date">
-         ${data.date.month} <br />
+         ${data.date.month}.${data.date.day} <br />
           ${data.date.year}
         </div>
         
